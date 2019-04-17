@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>glitchEffectTest</title>
 <style>
 
 body{
@@ -17,7 +18,7 @@ background-size:cover;
 }
 
 .glitch:before {
-content:"";
+content:'';
 position: absolute;
 top:0;
 left:0;
@@ -29,48 +30,48 @@ opacity: 0.8;
 mix-blend-mode:hard-light;
 }
 
-.glitch:active:before {
+.glitch:hover:before {
 -webkit-animation: glitchTest .2s infinite;
 {
 
 @-webkit-keyframes glitchTest{
 0% {
-background-position: 0 0;
--webkit-filter: hue-rotate(70deg);
+  background-position: 0 0;
+  -webkit-filter: hue-rotate(70deg);
 }
 10% {
-background-position: 60px 0;
+  background-position: 60px 0;
 }
 20% {
-background-position: -60px 0;
+  background-position: -60px 0;
 }
 30% {
-background-position: 12px 0;
+  background-position: 12px 0;
 }
 40% {
-background-position: 16px 0;
+  background-position: 16px 0;
 }
 50% {
-background-position: -24px 0;
+  background-position: -24px 0;
 }
 60% {
-background-position: -52px 0;
+  background-position: -52px 0;
 }
 70% {
-background-position: 0px 42px;
+  background-position: 0px 42px;
 }
 80% {
-background-position: -40px -30px;
+  background-position: -40px -30px;
 }
 100% {
-background-position: 0px 0px;
--webkit-filter: hue-rotate(360deg);
+  background-position: 0px 0px;
+  -webkit-filter: hue-rotate(360deg);
 }
 }
 
 </style>
 </head>
 <body>
-<a class="glitch"></a>
+<div class="glitch"></div>
 </body>
 </html>
