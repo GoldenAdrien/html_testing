@@ -1,0 +1,85 @@
+img .movedImage {
+  position: relative;
+  top:500px
+}
+.rotating-box{
+  width: 400px;
+  height: 400px;
+  margin: 100px;
+  perspective: 800px;
+}
+.single-rb{
+  width: 400px;
+  color: #E9FF00;
+  font-size: 60px;
+  font-family: 'Poppins', sans-serif;
+  animation: rotate 1s ease-in-out infinite alternate;
+  -webkit-animation: rotate 1s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+.single-rb div{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+.front-side{
+  transform: translateZ(200px);
+  -webkit-transform: translateZ(200px);
+  background: black;
+}
+.back-side{
+  position: absolute;
+  transform: rotateY(-180deg) translateZ(200px);
+  -webkit-transform: rotateY(-180deg) translateZ(200px);
+  background: black;
+}
+.bmovedImage{
+  transform: translateZ(200px) translateY(-400px);
+  -webkit-transform: translateZ(200px) translateY(-400px);
+}
+.left-side{
+  position: absolute;
+  transform: rotateY(-90deg) translateX(-200px);
+  -webkit-transform: rotateY(-90deg) translateX(-200px);
+  background: black;
+  transform-origin: left;
+  -webkit-transform-origin: left;
+}
+.lmovedImage{
+  transform: translateY(-410px);
+  -webkit-transform: translateY(-410px);
+}
+.right-side{
+  transform: rotateY(90deg) translateX(200px);
+  -webkit-transform: rotateY(90deg) translateX(200px);
+  background: black;
+  transform-origin: right;
+  -webkit-transform-origin: right;
+}
+.rmovedImage{
+  transform: translateY(-400px) translateX(0px);
+  -webkit-transform: translateY(-400px) translateX(0px);
+}
+.top-side{
+  transform: rotateX(-90deg) translateY(-200px);
+  -webkit-transform: rotateX(-90deg) translateY(-200px);
+  background: black;
+  transform-origin: top;
+  -webkit-transform-origin: top;
+}
+.bottom-side{
+  transform: rotateX(90deg) translateY(200px);
+  -webkit-transform: rotateX(90deg) translateY(200px);
+  background: black;
+  transform-origin: bottom;
+  -webkit-transform-origin: bottom;
+}
+@-webkit-keyframes rotate{
+  0%{-webkit-transform: rotateY(0);}
+  100%{-webkit-transform: rotateY(360deg);}
+}
+@keyframes rotate{
+  0%{transform: rotateY(0);}
+  100%{transform: rotateY(360deg);}
+}

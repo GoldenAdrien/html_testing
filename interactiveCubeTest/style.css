@@ -1,0 +1,24 @@
+body {
+  background: #ff4141;
+
+  perspective: 1500px;
+  height: 100vh;
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+div.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
